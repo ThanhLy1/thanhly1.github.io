@@ -1,35 +1,35 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
+    "name": "Thanh Ly",
     "label": "Student",
-    "picture": "https://github.com/kambergjohnson.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
+    "picture": "https://github.com/ThanhLy1.png",
+    "email": "thanhly@notanemail.com",
+    "phone": "555-555-5555",
+    "website": "https://thanhly1.github.io/",
+    "summary": "I am studying for a B.S. in Computer Science:Security Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Fall, 2024.",
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "thanhly", "url": "http://github.com/changeme" },
+      { "network": "linkedin", "username": "thanh-ly", "url": "http://linkedin.com/in/thanh-ly-54b2b293" },
+      { "network": "twitter", "username": "Thanh", "url": "http://twitter.com/changeme" },
+      { "network": "instagram", "username": "Thanh", "url": "http://instagram.com/changeme" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
-    { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "Cyber Security" },
+    { "name": "General AI" },
+    { "name": "Hydroponic Farming" },
+    { "name": "Automation" },
+    { "name": "Sky Diving" }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Python" ]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "keywords": [ "Windows", "Linux", "Git/GitHub", "g++", "Ghidra" ]
     }
   ],
   "education": [
@@ -37,7 +37,7 @@
       "institution": "University of Hawaii, Honolulu, HI",
       "area": "Computer Science (expected Spring, 2018)",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
+      "startDate": "2021-08-21",
       "endDate": "Present",
       "courses": [
       ]
