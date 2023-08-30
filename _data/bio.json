@@ -9,10 +9,10 @@
     "summary": "I am studying for a B.S. in Computer Science:Security Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Fall, 2024.",
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
-      { "network": "github", "username": "thanhly", "url": "http://github.com/changeme" },
+      { "network": "github", "username": "thanhly", "url": "https://github.com/ThanhLy1" },
       { "network": "linkedin", "username": "thanh-ly", "url": "http://linkedin.com/in/thanh-ly-54b2b293" },
-      { "network": "twitter", "username": "Thanh", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "Thanh", "url": "http://instagram.com/changeme" }
+      { "network": "twitter", "username": "Thanh", "url": "" },
+      { "network": "instagram", "username": "Thanh", "url": "" }
     ]
   },
   "interests": [
@@ -35,7 +35,7 @@
   "education": [
     {
       "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
+      "area": "Computer Science (expected Fall, 2024)",
       "studyType": "B.S.",
       "startDate": "2021-08-21",
       "endDate": "Present",
@@ -45,34 +45,36 @@
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
-      "website": "",
-      "startDate": "2015-08-01",
+      "company": "HII-Mission Technologies",
+      "position": "Intern",
+      "website": "https://hii.com/",
+      "startDate": "2023-05-23",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "summary": "Intern at HII-Mission Technologies in the workforce development program",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Work alongside subject matter experts from multiple disciplines across the program",
+        "Utilize technical and inter-personal skills and knowledge to support ongoing projects",
+        "Participate in briefs, meetings, and educational courses"
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
-      "summary": "",
+      "company": "OVSS VA Work Study",
+      "position": "Office Assistant",
+      "website": "https://manoa.hawaii.edu/veterans/",
+      "startDate": "2023-02-14",
+      "endDate": "Present",
+      "summary": "Assist with the daily operations of OVSS",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Assist patrons on any questions about VA education & health benefits",
+        "Assist in OVSS outreach at campus center",
+        "Assist OVSS director in community project"
       ]
     }
   ],
   "volunteer": [
     {
       "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
+      "website": "https://manoa.hawaii.edu/veterans/",
       "position": "Software Developer",
       "startDate": "2016-01-01",
       "endDate": "Present",
