@@ -25,11 +25,11 @@ Fast forward to today, and the landscape has dramatically shifted. The introduct
 
 Here’s an example to highlight the syntactical differences between C++ and JavaScript:
 
-<img width="600px" class="rounded float-start pe-4" src="../img/java_journey/cpp-vs-java.jpg">
+<img width="600px" class="rounded float-start pe-4" src="../img/java_journey/cpp-vs-java.png">
 
 While at first glance, the syntax of C++ and JavaScript might appear somewhat analogous, the underlying semantics and the language's intrinsic behavior differ quite extensively. One of JavaScript's standout features is its first-class functions:
 
-<img width="600px" class="rounded float-start pe-4" src="../img/java_journey/first-class.jpg">
+<img width="600px" class="rounded float-start pe-4" src="../img/java_journey/first-class.png">
 
 ## Athletic Software Engineering and My Approach
 This ability to treat functions as values, pass them as arguments, and return them from other functions brings about a degree of flexibility that's hard to match.
