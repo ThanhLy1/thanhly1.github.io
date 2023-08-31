@@ -10,9 +10,7 @@
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "thanhly1", "url": "https://github.com/ThanhLy1" },
-      { "network": "linkedin", "username": "thanh-ly-54b2b293", "url": "http://linkedin.com/in/thanh-ly-54b2b293" },
-      { "network": "twitter", "username": "", "url": "" },
-      { "network": "instagram", "username": "", "url": "" }
+      { "network": "linkedin", "username": "thanh-ly-54b2b293", "url": "http://linkedin.com/in/thanh-ly-54b2b293" }
     ]
   },
   "interests": [
@@ -98,14 +96,6 @@
         "Interim President, Student Veterans of America, 2022-Present",
         "Member, Veterans of Foreign War, 2012-Present"
       ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "",
-      "date": "",
-      "awarder": "",
-      "summary": ""
     }
   ],
   "references": [
