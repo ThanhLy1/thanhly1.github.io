@@ -11,6 +11,8 @@ labels:
 summary: "A C++ program I developed to solve word puzzles, inspired by my frustration with word games like Wordle and Wordscape."
 ---
 
+<img class="img-fluid" src="../img/wordsearch/wordsearch-square.jpg">
+
 # Unveiling Solutions: My Expedition with the Word Search Program
 
 Word puzzles, those intricate grids of letters that challenge our minds, have a way of both captivating and vexing us. My journey with coding began when my frustration with word games like Wordle and Wordscape ignited a spark of curiosity. Could I create a program that not only solved these puzzles but also demystified the process? The result was the **Word Search Program**, a C++ creation designed to tackle word conundrums with precision.
