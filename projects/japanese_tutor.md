@@ -48,10 +48,12 @@ One of the program's standout features is its integrated Japanese voice synthesi
 
 Check out the synthesized audio. 
 
-<video src="(https://github.com/ThanhLy1/thanhly1.github.io/assets/123609101/bb3c6d79-cf6b-4242-8ea5-cf4de237c4b5" controls="controls" style="max-width: 730px;">
+Japanese
+<video src="img/japanese_tutor/jp_314.wav" controls="controls" style="max-width: 730px;">
 </video>
 
-<video src="https://github.com/ThanhLy1/thanhly1.github.io/assets/123609101/2c12684c-f3e8-4ea0-9217-c5e74c3f8950" controls="controls" style="max-width: 730px;">
+Egnlish
+<video src="img/japanese_tutor/eng_314.wav" controls="controls" style="max-width: 730px;">
 </video>
 
 ### A Glimpse into the Future
