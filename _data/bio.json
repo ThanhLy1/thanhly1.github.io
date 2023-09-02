@@ -73,14 +73,27 @@
       "company": "Raytheon",
       "position": "Assembler C",
       "website": "https://rtx.com",
-      "startDate": "2018-04-1",
-      "endDate": "2019-06-1",
+      "startDate": "2018-04-01",
+      "endDate": "2019-06-01",
       "summary": "Responsible for performing a range of complex assembly procedures for the integration of precision electronics, avionics, and military systems.",
       "highlights": [
         "Read and interpret complex blueprints, diagrams, and schematics to ensure correct assembly sequences",
         "Collaborated closely with multidisciplinary engineers on two six-sigma projects",
         "Work closely with Production Supervisors and Engineers to ensure products meet quality assurance and clients standards",
         "Assembled critical components for global defense platforms"
+      ]
+    },
+    {
+      "company": "US ARMY",
+      "position": "Automated Logistics Specialist",
+      "website": "",
+      "startDate": "2006-06-01",
+      "endDate": "2012-08-1",
+      "summary": "Operated and managed logistics and maintenance systems across multiple locations",
+      "highlights": [
+        "Operated defense management information system to generate maintenance work orders and to close and open requisitions",
+        "Provided technical guidance to lower and higher grade personnel",
+        "Conducted airborne operations over Iraq"
       ]
     }
   ],
