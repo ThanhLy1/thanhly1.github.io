@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/japanese-tutor/japanese-tutor-square.jpg
+image: img/japanese_tutor/japanese-tutor-square.jpg
 title: "Japanese Tutor"
 date: 2023
 published: true
@@ -13,7 +13,7 @@ summary: "I embarked on a transformative journey to design an AI-powered Japanes
 ---
 
 <div class="text-center p-4">
-  <img class="img-fluid" src="..img/japanese_tutor/doyoustudyjapanese.jpg">
+  <img class="img-fluid" src="../img/japanese_tutor/doyoustudyjapanese.jpg">
 </div>
 
 # Crafting a Japanese Tutor: My 3-Week Journey into AI-Powered Language Learning
