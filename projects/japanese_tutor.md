@@ -49,10 +49,10 @@ One of the program's standout features is its integrated Japanese voice synthesi
 Check out the synthesized audio. 
 
 Japanese
-<audio src="//img/japanese_tutor/jp_314.mp4" controls preload></audio>
+<audio src="https://thanhly1.github.io//img/japanese_tutor/jp_314.mp4" controls preload></audio>
 
 English
-<audio src="//img/japanese_tutor/eng_314.mp4" controls preload></audio>
+<audio src="https://thanhly1.github.io//img/japanese_tutor/eng_314.mp4" controls preload></audio>
 
 
 ### A Glimpse into the Future
