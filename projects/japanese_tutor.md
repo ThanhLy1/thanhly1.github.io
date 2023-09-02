@@ -47,9 +47,11 @@ A pivotal aspect of the Japanese Tutor program is the integration of the **Ebisu
 One of the program's standout features is its integrated Japanese voice synthesizer powered by the **OpenJTalk AI** technology. This advanced AI-driven voice synthesis not only provides accurate pronunciations but also enables learners to practice listening and speaking skills. By transforming text into spoken language and vice versa, the Japanese Tutor project bridges the gap between written and oral communication.
 
 Check out the synthesized audio. 
-https://github.com/ThanhLy1/thanhly1.github.io/assets/123609101/bb3c6d79-cf6b-4242-8ea5-cf4de237c4b5
 
-https://github.com/ThanhLy1/thanhly1.github.io/assets/123609101/2c12684c-f3e8-4ea0-9217-c5e74c3f8950
+![Japanese Audio](https://github.com/ThanhLy1/thanhly1.github.io/assets/123609101/bb3c6d79-cf6b-4242-8ea5-cf4de237c4b5)
+
+![English Audio](https://github.com/ThanhLy1/thanhly1.github.io/assets/123609101/2c12684c-f3e8-4ea0-9217-c5e74c3f8950)
+
 
 
 ### A Glimpse into the Future
