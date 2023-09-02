@@ -12,7 +12,9 @@ labels:
   - ES6
 ---
 
-<img width="600px" class="rounded float-start pe-4" src="../img/java_journey/journey.jpg">
+<div class="text-center p-4">
+  <img class="img-fluid" src="../img/java_journey/journey.jpg">
+</div>
 
 <br>
 
@@ -31,7 +33,10 @@ Fast forward to today, and the landscape has dramatically shifted. The introduct
 
 Here’s an example to highlight the syntactical differences between C++ and JavaScript:
 
-<img width="600px" class="rounded float-start pe-4" src="../img/java_journey/cpp-vs-java.png">
+
+<div class="text-center p-4">
+  <img width="600px" class="rounded float-start pe-4" src="../img/java_journey/cpp-vs-java.png">
+</div>
 
 <br>
 
@@ -39,7 +44,9 @@ While at first glance, the syntax of C++ and JavaScript might appear somewhat an
 
 <br>
 
-<img width="600px" class="rounded float-start pe-4" src="../img/java_journey/first-class.png">
+<div class="text-center p-4">
+  <img width="600px" class="rounded float-start pe-4" src="../img/java_journey/first-class.png">
+</div>
 
 <br>
 

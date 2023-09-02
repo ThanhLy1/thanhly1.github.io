@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/japanese-tutor/japanese-tutor-square.png
+image: img/japanese-tutor/japanese-tutor-square.jpg
 title: "Japanese Tutor"
 date: 2023
 published: true
