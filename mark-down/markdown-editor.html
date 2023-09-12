@@ -31,4 +31,19 @@
         <div id="preview"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/m
+    <script src="marked.min.js"></script>
+    <script>
+        // Enable GitHub Flavored Markdown (GFM)
+        marked.setOptions({
+            gfm: true,
+            breaks: true // This will support GFM line breaks
+        });
+
+        document.getElementById('editor').addEventListener('input', function(e) {
+            const markdown = e.target.value;
+            const html = marked(markdown);
+            document.getElementById('preview').innerHTML = html;
+        });
+    </script>
+</body>
+</html>
