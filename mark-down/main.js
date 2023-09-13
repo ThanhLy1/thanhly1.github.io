@@ -1,46 +1,72 @@
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // Create an instance of the Marked class
+const markedInstance = new marked.Marked();
+
+// Enable GFM and other related options
+markedInstance.setOptions({
+    gfm: true,               // Enable GitHub Flavored Markdown
+    breaks: true,            // Use GFM line breaks
+    headerIds: true,         // Use GFM header IDs
+    mangle: true,            // Encode code blocks
+    pedantic: false,         // Don't be strict about parsing GFM
+    smartLists: true,        // Use smarter list behavior than the original markdown
+    smartypants: false,      // Don't use "smart" typographic punctuation
+    xhtml: false             // Don't output self-closing tags
+});
+
+// Use the GFM extension
+if (window.markedGfmHeadingId) {
+    markedInstance.use(window.markedGfmHeadingId);
+}
+    
+    // Create an instance of the Marked class
+    //const markedInstance = new marked.Marked();
+
+    // Use the GFM extension
+    if (window.markedGfmHeadingId) {
+        markedInstance.use(window.markedGfmHeadingId);
+    }
+
+    // Get the editor and preview elements
     const editor = document.getElementById('editor');
     const preview = document.getElementById('preview');
-    const referenceDropdown = document.getElementById('referenceDropdown');
-    let previousContent = ''; // To store the previous content of the editor
 
-    // Set marked to use GitHub Flavored Markdown (GFM)
-    marked.setOptions({
-        gfm: true,
-        breaks: true
-    });
+    // Store the last edited markdown
+    let lastEditedMarkdown = "";
 
-    // Update the preview whenever the editor content changes
-    editor.addEventListener('input', function() {
-        preview.innerHTML = marked(editor.value);
-    });
+    // Function to render markdown to HTML
+    function renderMarkdown() {
+        const markdownText = editor.value;
+        const html = markedInstance.parse(markdownText);
+        preview.innerHTML = '<div class="markdown-body">' + html + '</div>';
+    }
 
-    // Handle the reference dropdown
-    referenceDropdown.addEventListener('change', function() {
-        if (referenceDropdown.value === 'preview') {
-            previousContent = editor.value; // Store the current content
-            loadReferenceMd();
-        } else if (referenceDropdown.value === 'edit') {
-            editor.value = previousContent; // Revert to the previous content
-            editor.dispatchEvent(new Event('input')); // Trigger the input event to update the preview
+    // Load reference.md content
+    function loadReference() {
+        fetch('reference.md')
+            .then(response => response.text())
+            .then(data => {
+                editor.value = data;
+                renderMarkdown();
+            });
+    }
+
+    // Handle dropdown changes
+    document.getElementById('modeSelector').addEventListener('change', function() {
+        if (this.value === 'reference') {
+            // Store the current markdown
+            lastEditedMarkdown = editor.value;
+            // Load the reference.md content
+            loadReference();
+        } else if (this.value === 'edit') {
+            // Load the last edited markdown
+            editor.value = lastEditedMarkdown;
+            renderMarkdown();
         }
     });
 
-    function loadReferenceMd() {
-        fetch('reference.md')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(data => {
-                editor.value = data; // Set the fetched markdown content to the editor
-                editor.dispatchEvent(new Event('input')); // Trigger the input event to update the preview
-            })
-            .catch(error => {
-                console.error('Error fetching reference.md:', error);
-                preview.innerText = 'Error loading reference.md';
-            });
-    }
-});
+    // Add an event listener to the editor
+    editor.addEventListener('input', renderMarkdown);
+
+    // Initial render
+    renderMarkdown();
