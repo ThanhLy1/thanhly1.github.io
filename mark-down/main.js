@@ -2,7 +2,7 @@
 const markedInstance = new marked.Marked();
 
 // Enable GFM and other related options
-markedInstance.setOptions({
+marked.setOptions({
     gfm: true,               // Enable GitHub Flavored Markdown
     breaks: true,            // Use GFM line breaks
     headerIds: true,         // Use GFM header IDs
@@ -13,11 +13,10 @@ markedInstance.setOptions({
     xhtml: false             // Don't output self-closing tags
 });
 
-
-
 // Use the GFM extension
+// (This assumes you have a separate extension for GFM heading IDs)
 if (window.markedGfmHeadingId) {
-    markedInstance.use(window.markedGfmHeadingId);
+    marked.use(window.markedGfmHeadingId);
 }
 
 // Get the editor and preview elements
@@ -30,7 +29,7 @@ let lastEditedMarkdown = "";
 // Function to render markdown to HTML
 function renderMarkdown() {
     const markdownText = editor.value;
-    const html = markedInstance.parse(markdownText);
+    const html = marked(markdownText); // Use marked() directly
     preview.innerHTML = '<div class="markdown-body">' + html + '</div>';
 }
 
