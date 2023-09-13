@@ -5,33 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown Preview Editor</title>
+    <meta name="description" content="A simple Markdown previewer">
     <link rel="stylesheet" href="github-markdown-light.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
 </head>
 
 <body>
     <header>
         <h1>Markdown Previewer</h1>
     </header>
-    <div id="referenceDropdown" style="position: absolute; top: 40px; right: 40px;">
-        <select id="modeSelector">
-            <option value="edit">Edit</option>
-            <option value="reference">Reference</option>
-        </select>
-    </div>
-    <div class="containers">
-        <div class="container inputPane">
-            <textarea id="editor" placeholder="Type your markdown here..."></textarea>
+    <main>
+        <div class="containers">
+            <div class="container inputPane">
+                <textarea id="editor" placeholder="Type your markdown here..."></textarea>
+            </div>
+            <div class="container pane">
+                <div id="preview"></div>
+            </div>
         </div>
-        <div class="container pane">
-            <div id="preview"></div>
+    </main>
+    <aside>
+        <label for="modeSelector" style="display: none;">Mode Selector</label> <!-- Accessibility improvement -->
+        <div id="referenceDropdown" style="position: absolute; top: 40px; right: 40px;">
+            <select id="modeSelector">
+                <option value="edit">Edit</option>
+                <option value="basicReference">Basic Reference</option>
+                <option value="advancedReference">Advanced Reference</option>
+                <option value="reference">Reference</option>
+            </select>
         </div>
-    </div>
+        
+    </aside>
 
     <!-- Include the marked and marked-gfm-heading-id UMD libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id/lib/index.umd.js"></script>
-    <script src = "main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
