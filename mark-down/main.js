@@ -1,3 +1,6 @@
+// Create an instance of the Marked class
+const markedInstance = new marked.Marked();
+
 // Enable GFM and other related options
 markedInstance.setOptions({
     gfm: true,               // Enable GitHub Flavored Markdown
@@ -10,8 +13,7 @@ markedInstance.setOptions({
     xhtml: false             // Don't output self-closing tags
 });
 
-// Create an instance of the Marked class
-const markedInstance = new marked.Marked();
+
 
 // Use the GFM extension
 if (window.markedGfmHeadingId) {
