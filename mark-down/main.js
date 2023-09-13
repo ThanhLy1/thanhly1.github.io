@@ -51,7 +51,6 @@ function loadReference(filename) {
         });
 }
 
-
 // Handle dropdown changes
 document.getElementById('modeSelector').addEventListener('change', function() {
     switch (this.value) {
