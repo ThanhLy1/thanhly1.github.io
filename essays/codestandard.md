@@ -10,7 +10,7 @@ labels:
   - IntelliJ
 ---
 
-![CodeStandard](../img/codestandard/codestandard.png)
+<img src="../img/codestandard/codestandard.png" width="800" height="auto" alt="Code Standard">
 
 ## Introduction
 
