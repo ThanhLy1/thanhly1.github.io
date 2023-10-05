@@ -2,7 +2,7 @@
 layout: essay
 type: essay
 title: "A Discourse on UI Frameworks: Bootstrap 5 in Focus"
-date: 2023-09-01
+date: 2023-10-04
 published: true
 labels:
   - Web Development
