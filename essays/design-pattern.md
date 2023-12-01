@@ -3,6 +3,7 @@ layout: essay
 type: essay
 title: Exploring Design Patterns in a Meteor React Project
 date: 2023-11-30
+published: true
 labels:
   - Design Patterns
   - Software Engineering

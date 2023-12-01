@@ -4,7 +4,7 @@ type: essay
 title: "My Journey with JavaScript and Athletic Software Engineering"
 # All dates must be YYYY-MM-DD format!
 date: 2023-08-30
-published: true
+published: False
 labels:
   - Software Engineering
   - Learning

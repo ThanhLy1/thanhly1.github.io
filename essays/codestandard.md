@@ -3,6 +3,7 @@ layout: essay
 type: essay
 title: In Defense of Coding Standards Beyond Aesthetics and into Understanding
 date: 2023-09-17
+published: true
 labels:
   - Coding Standards
   - Software Engineering
