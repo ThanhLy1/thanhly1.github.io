@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "My Hydroponic Journey: From Novice to Innovator"
 date: 2023-09-01
-published: true
+published: false
 labels:
   - Hydroponics
   - Farming Innovation
