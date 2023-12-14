@@ -33,7 +33,8 @@ This new approach to user support aims to streamline the information retrieval p
 
 The UH ITS Ask Us AI Chatbot project originated as part of the 2023 Hawaii Annual Code Challenge (HACC), a challenge titled "Ask Us" presented by the University of Hawaii, Information Technology Services. The central IT service, which operates a 24/7 Help Desk, sought to enhance its "Ask Us" online knowledge base used by a wide range of UH community members. Despite the availability of over 300 support articles, the current keyword search functionality varied in effectiveness, often depending on the user's familiarity with IT terminology and systems.
 
-see the current setup the UH system have in place https://www.hawaii.edu/askus/
+see the current setup the UH system have in place [Ask Us - University of Hawaii System](https://www.hawaii.edu/askus/)
+
 <div class="text-center p-4">
   <img class="img-fluid" src="../img/ask-uh/current-uhits.png">
 </div>
@@ -107,7 +108,10 @@ The development of the UH ITS Ask Us AI Chatbot, as part of the 2023 Hawaii Annu
 My contribution to the project was grounded in conceptualizing and implementing the backend logic. I was responsible for creating the core functionality that enabled the chatbot to understand and intelligently respond to user queries. This involved writing intricate code that utilized natural language processing algorithms and AI models from OpenAI. One of my key tasks was to adapt these sophisticated technologies into a simplistic yet effective form that could be easily managed and scaled.
 
 For example, I employed Meteor.js to construct a robust backend, ensuring seamless communication between the user interface and the AI processing unit. My approach was to use straightforward, yet powerful coding patterns that allowed for easy maintenance and future enhancements.
-![img.png](../img/ask-uh/fetchembed.png)
+
+<div class="text-center p-4">
+  <img class="img-fluid" src="../img/ask-uh/fetchembed.png">
+</div>
 
 ### Navigating Technical Challenges and Innovations
 
@@ -134,7 +138,8 @@ As we reflect on this journey, we are inspired by the impact that our chatbot ha
 ## Acknowledgments
 
 ### Project Page
-https://regex-ics314.github.io/
+[Regex-ICS314](https://regex-ics314.github.io/)
+
   <section class="section hero is-light" id="team-members">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
