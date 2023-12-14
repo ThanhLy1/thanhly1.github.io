@@ -1,0 +1,114 @@
+{
+  "basics": {
+    "name": "Thanh Ly",
+    "label": "Student",
+    "picture": "https://github.com/ThanhLy1.png",
+    "email": "thanhly@tempmail.com",
+    "phone": "Phone number upon request",
+    "website": "https://thanhly1.github.io/",
+    "summary": "I am studying for a B.S. in Computer Science:Security Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Fall, 2024.",
+    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "thanhly1", "url": "https://github.com/ThanhLy1" },
+      { "network": "linkedin", "username": "thanh-ly-54b2b293", "url": "http://linkedin.com/in/thanh-ly-54b2b293" }
+    ]
+  },
+  "interests": [
+    { "name": "Cyber Security" },
+    { "name": "General AI" },
+    { "name": "Hydroponic Farming" },
+    { "name": "Automation" },
+    { "name": "Sky Diving" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "C++", "Javascript", "Assembly", "Python", "Meteorjs", "Bootstrap 5", "React" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "Windows", "Linux", "GitHub", "g++", "Ghidra", "CMake" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Fall, 2024)",
+      "studyType": "B.S.",
+      "startDate": "2021-08-21",
+      "endDate": "Present",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "HII-Mission Technologies",
+      "position": "Intern",
+      "website": "https://hii.com",
+      "startDate": "2023-05-23",
+      "endDate": "Present",
+      "summary": "Intern at HII-Mission Technologies in the workforce development program",
+      "highlights": [
+        "Work alongside subject matter experts from multiple disciplines across the program",
+        "Utilize technical and inter-personal skills and knowledge to support ongoing projects",
+        "Participate in briefs, meetings, and educational courses"
+      ]
+    },
+    {
+      "company": "OVSS VA Work Study",
+      "position": "Office Assistant",
+      "website": "https://manoa.hawaii.edu/veterans",
+      "startDate": "2022-02-14",
+      "endDate": "Present",
+      "summary": "Assist with the daily operations of OVSS",
+      "highlights": [
+        "Assist patrons on any questions about VA education & health benefits",
+        "Assist in OVSS outreach at campus center",
+        "Assist OVSS director in community project",
+        "Attend Leadership Summit with Student Veterans of America"
+      ]
+    },
+    {
+      "company": "Raytheon",
+      "position": "Assembler C",
+      "website": "https://rtx.com",
+      "startDate": "2018-04-01",
+      "endDate": "2019-06-01",
+      "summary": "Responsible for performing a range of complex assembly procedures for the integration of precision electronics, avionics, and military systems.",
+      "highlights": [
+        "Read and interpret complex blueprints, diagrams, and schematics to ensure correct assembly sequences",
+        "Collaborated closely with multidisciplinary engineers on two six-sigma projects",
+        "Work closely with Production Supervisors and Engineers to ensure products meet quality assurance and clients standards",
+        "Assembled critical components for global defense platforms"
+      ]
+    },
+    {
+      "company": "US ARMY",
+      "position": "Automated Logistics Specialist",
+      "website": "",
+      "startDate": "2006-06-01",
+      "endDate": "2012-08-01",
+      "summary": "Operated and managed logistics and maintenance systems across multiple locations",
+      "highlights": [
+        "Operated defense management information system to generate maintenance work orders and to close and open requisitions",
+        "Provided technical guidance to lower and higher grade personnel",
+        "Conducted airborne operations over Iraq"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "",
+      "website": "",
+      "position": "Professional organization involvement",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Interim President, Student Veterans of America at Manoa, 2022-Present",
+        "Member, Veterans of Foreign War, 2012-Present"
+      ]
+    }
+  ]
+}

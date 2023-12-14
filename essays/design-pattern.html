@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Exploring Design Patterns in a Meteor React Project | Thanh Ly | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/ThanhLy1.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Thanh Ly | Professional Portfolio">
+    <meta property="og:url" content="https://thanhly1.github.io/essays/design-pattern.html">
+    <meta property="og:title" content="Exploring Design Patterns in a Meteor React Project | Thanh Ly | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/ThanhLy1.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Exploring Design Patterns in a Meteor React Project | Thanh Ly | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Thanh Ly</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/mark-down/">Markdown</a>
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Exploring Design Patterns in a Meteor React Project</h1>
+  <span class="date">30 Nov 2023</span>
+  <hr>
+  <p><img src="../img/design-pattern/design-pattern.png" alt="DesignPattern" /></p>
+
+<h1 id="introduction-to-design-patterns-in-a-meteor-react-project">Introduction to Design Patterns in a Meteor React Project</h1>
+<p>Design patterns are fundamental techniques in software development, offering structured solutions to common coding challenges. They are essential for creating scalable, maintainable, and efficient applications. In this essay, we explore the application of various design patterns in a Meteor React project, which combines a full-stack JavaScript environment with AI chatbot interactions and session management capabilities.</p>
+
+<p>This project showcases how design patterns can be implemented in a real-world application, providing insights into their practical use and benefits. By examining these patterns, we can understand how they contribute to solving design problems, improving code readability, and enhancing overall software architecture.</p>
+
+<h2 id="module-and-singleton-patterns">Module and Singleton Patterns</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SessionManager.js</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Random</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">meteor/random</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">UserSessions</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../../../api/session/UserSessions</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">createNewSession</span> <span class="o">=</span> <span class="p">(</span><span class="nx">userId</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// Generate a temporary user ID if none is provided</span>
+  <span class="kd">const</span> <span class="nx">tempUserId</span> <span class="o">=</span> <span class="nx">userId</span> <span class="o">||</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">id</span><span class="p">();</span>
+
+  <span class="kd">const</span> <span class="nx">newSession</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">userId</span><span class="p">:</span> <span class="nx">tempUserId</span><span class="p">,</span>
+    <span class="na">messages</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="na">currentTopicEmbedding</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="na">currentArticles</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="na">createdAt</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+    <span class="na">lastUpdatedAt</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+    <span class="na">isTemporaryId</span><span class="p">:</span> <span class="o">!</span><span class="nx">userId</span><span class="p">,</span> <span class="c1">// Flag to indicate if this is a temporary session</span>
+  <span class="p">};</span>
+  <span class="nx">UserSessions</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">newSession</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">newSession</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">getSession</span> <span class="o">=</span> <span class="p">(</span><span class="nx">userId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">UserSessions</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span> <span class="nx">userId</span> <span class="p">})</span> <span class="o">||</span> <span class="nx">createNewSession</span><span class="p">(</span><span class="nx">userId</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">updateSession</span> <span class="o">=</span> <span class="p">(</span><span class="nx">userId</span><span class="p">,</span> <span class="nx">updates</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">UserSessions</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">update</span><span class="p">({</span> <span class="nx">userId</span> <span class="p">},</span> <span class="p">{</span> <span class="na">$set</span><span class="p">:</span> <span class="p">{</span> <span class="p">...</span><span class="nx">updates</span><span class="p">,</span> <span class="na">lastUpdatedAt</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span> <span class="p">}</span> <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">deleteSession</span> <span class="o">=</span> <span class="p">(</span><span class="nx">userId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">UserSessions</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">remove</span><span class="p">({</span> <span class="nx">userId</span> <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">// Function to handle temporary sessions</span>
+<span class="kd">const</span> <span class="nx">handleTemporarySession</span> <span class="o">=</span> <span class="p">(</span><span class="nx">userId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">session</span> <span class="o">=</span> <span class="nx">getSession</span><span class="p">(</span><span class="nx">userId</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">session</span><span class="p">.</span><span class="nx">isTemporary</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">deleteSession</span><span class="p">(</span><span class="nx">userId</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="p">{</span> <span class="nx">getSession</span><span class="p">,</span> <span class="nx">updateSession</span><span class="p">,</span> <span class="nx">deleteSession</span><span class="p">,</span> <span class="nx">handleTemporarySession</span> <span class="p">};</span>
+</code></pre></div></div>
+<p>The Module and Singleton patterns are foundational in structuring the application. The Module Design Pattern is evident in the segregation of functionalities into distinct modules, such as <code class="language-plaintext highlighter-rouge">AskUs</code>, <code class="language-plaintext highlighter-rouge">OpenAiClient</code>, and <code class="language-plaintext highlighter-rouge">SessionManager</code>. This pattern promotes code organization, making it easier to maintain and extend. Each module acts as an encapsulated entity, with its specific responsibilities, leading to a clean and organized codebase.</p>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// OpenAiClient.js</span>
+<span class="k">import</span> <span class="nx">OpenAI</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">openai</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// Initialize and export OpenAI client instance</span>
+<span class="kd">const</span> <span class="nx">openai</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenAI</span><span class="p">({</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">OPENAI_API_KEY</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">openai</span><span class="p">;</span>
+</code></pre></div></div>
+<p>In contrast, the Singleton Pattern is used in the application to ensure that certain objects, like <code class="language-plaintext highlighter-rouge">UserSessions</code>, are created only once and shared across the application. This pattern is crucial for managing resources efficiently, preventing issues related to multiple object instances, and ensuring a consistent state throughout the application.</p>
+
+<p>These patterns lay the groundwork for the application’s structure, ensuring that the code is modular, manageable, and adheres to best practices in software development.</p>
+<h2 id="observer-and-strategy-patterns">Observer and Strategy Patterns</h2>
+<h3 id="observer-pattern">Observer Pattern</h3>
+<p>The Observer Pattern plays a significant role in the Meteor React project, particularly in managing real-time data reactivity. This pattern allows for automatic propagation of data changes to the UI, ensuring that the application remains responsive and up-to-date with the latest data. In Meteor, this is achieved through the <code class="language-plaintext highlighter-rouge">Tracker.autorun</code> function, which automatically re-runs reactive functions when their dependencies change. This behavior is essential for real-time applications, as it keeps the user interface synchronized with the underlying data model without manual intervention.</p>
+
+<h3 id="strategy-pattern">Strategy Pattern</h3>
+<p>The Strategy Pattern is employed to handle varying user interactions and data processing requirements dynamically. This pattern enables the application to select the appropriate algorithm or approach based on the context, such as user input or preferences. For instance, different user languages and input types might require distinct processing methods or responses. By applying the Strategy Pattern, the application can easily switch between these methods, ensuring that user interactions are handled efficiently and appropriately according to the context. This adaptability is crucial for applications dealing with diverse user inputs and behaviors, as it provides flexibility and enhances user experience.</p>
+
+<p>Both the Observer and Strategy patterns contribute significantly to the robustness and adaptability of the Meteor React application. They ensure that the application is both responsive to real-time changes and capable of handling various user interactions effectively.</p>
+
+<h2 id="command-and-composite-patterns">Command and Composite Patterns</h2>
+<h3 id="command-pattern">Command Pattern</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// FileManager.js</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Meteor</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">meteor/meteor</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">check</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">meteor/check</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">MyFiles</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../../api/fileupload/FilesCollection</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">Meteor</span><span class="p">.</span><span class="nx">methods</span><span class="p">({</span>
+  <span class="dl">'</span><span class="s1">files.remove</span><span class="dl">'</span><span class="p">(</span><span class="nx">fileId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">check</span><span class="p">(</span><span class="nx">fileId</span><span class="p">,</span> <span class="nb">String</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">MyFiles</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">fileId</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nx">Meteor</span><span class="p">.</span><span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">file-not-found</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">File not found</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Additional checks like user permissions can be added here</span>
+    <span class="c1">// Example: if (!this.userId || file.userId !== this.userId) {</span>
+    <span class="c1">//   throw new Meteor.Error('not-authorized');</span>
+    <span class="c1">// }</span>
+
+    <span class="nx">MyFiles</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">fileId</span><span class="p">);</span> <span class="c1">// This will also remove the file from the filesystem</span>
+  <span class="p">},</span>
+
+  <span class="dl">'</span><span class="s1">files.rename</span><span class="dl">'</span><span class="p">(</span><span class="nx">fileId</span><span class="p">,</span> <span class="nx">newName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">check</span><span class="p">(</span><span class="nx">fileId</span><span class="p">,</span> <span class="nb">String</span><span class="p">);</span>
+    <span class="nx">check</span><span class="p">(</span><span class="nx">newName</span><span class="p">,</span> <span class="nb">String</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">MyFiles</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">fileId</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nx">Meteor</span><span class="p">.</span><span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">file-not-found</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">File not found</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Additional checks like user permissions can be added here</span>
+    <span class="c1">// Example: if (!this.userId || file.userId !== this.userId) {</span>
+    <span class="c1">//   throw new Meteor.Error('not-authorized');</span>
+    <span class="c1">// }</span>
+
+    <span class="c1">// Update the file name</span>
+    <span class="nx">MyFiles</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">fileId</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">$set</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="nx">newName</span><span class="p">,</span>
+        <span class="c1">// If you're storing the name in metadata as well</span>
+        <span class="dl">'</span><span class="s1">meta.name</span><span class="dl">'</span><span class="p">:</span> <span class="nx">newName</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+
+  <span class="c1">// ... other methods</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<p>The Command Pattern is central to organizing actions and requests within the Meteor React project. This pattern encapsulates requests or simple operations as objects, allowing for more flexible, queuable, and loggable command execution. For instance, methods like <code class="language-plaintext highlighter-rouge">files.remove</code> and <code class="language-plaintext highlighter-rouge">files.rename</code> in the project are examples of the Command Pattern in action. They encapsulate all the information needed for the action, such as file IDs and new names, and can be executed or even reversed if needed. This pattern provides significant flexibility in executing operations and managing them centrally, making the code more maintainable and scalable.</p>
+
+<h3 id="composite-pattern">Composite Pattern</h3>
+<p>The Composite Pattern is used in the project to build a hierarchical object structure that treats individual objects and compositions of objects uniformly. In the UI of the Meteor React application, this pattern can be seen in the way complex UI components are composed of simpler components. For example, a dashboard might be composed of various widgets, each a standalone component but also part of a larger UI structure. This pattern simplifies the management of groups of objects by allowing you to treat them as single instances of an object, making the UI more manageable and extendable.</p>
+
+<p>The Command and Composite patterns enhance the project’s ability to handle complex operations and UI structures. They enable better management of actions and user interface elements, making the application more organized and easier to maintain.</p>
+
+<h2 id="state-and-builder-patterns">State and Builder Patterns</h2>
+<h3 id="state-pattern">State Pattern</h3>
+<p>The State Pattern is employed in the application to manage changes in the state of objects. This is particularly evident in the <code class="language-plaintext highlighter-rouge">FileManager</code> component, where the state dictates the behavior of the component, such as displaying modals, handling file selections, and managing user inputs. By using the State Pattern, the <code class="language-plaintext highlighter-rouge">FileManager</code> component can change its behavior when its internal state changes, making it responsive and interactive. This pattern is crucial for components that have multiple states with distinct behaviors, as it keeps the state management and the associated behavior well-organized and easy to maintain.</p>
+
+<h3 id="builder-pattern">Builder Pattern</h3>
+<p>The Builder Pattern is utilized for constructing complex queries and objects step by step. This pattern is especially useful in scenarios where an object requires multiple steps of configuration or initialization before it can be used. In the context of the Meteor React application, this pattern can be seen in assembling complex server-side operations or constructing intricate UI elements. By employing the Builder Pattern, the application can create these complex elements in a controlled and stepwise manner, ensuring that all parts are correctly initialized and configured before the object is used.</p>
+
+<p>The State and Builder patterns play a critical role in enhancing the application’s interactivity and handling complex object constructions. They contribute significantly to the application’s overall robustness, making it adaptable to changing requirements and user interactions.</p>
+
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
