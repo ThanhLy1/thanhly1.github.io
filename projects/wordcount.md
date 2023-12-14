@@ -4,7 +4,7 @@ type: project
 image: img/wc/wc-square.png
 title: "Crafting Efficiency: The Word Count Program"
 date: 2023
-published: false
+published: true
 labels:
   - C Programming
   - Command Line
