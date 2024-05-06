@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The Importance of Asking Smart Questions: A Deep Dive into StackOverflow | Thanh Ly | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/ThanhLy1.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Thanh Ly | Professional Portfolio">
+    <meta property="og:url" content="https://thanhly1.github.io/essays/stackoverflow_dive.html">
+    <meta property="og:title" content="The Importance of Asking Smart Questions: A Deep Dive into StackOverflow | Thanh Ly | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/ThanhLy1.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>The Importance of Asking Smart Questions: A Deep Dive into StackOverflow | Thanh Ly | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Thanh Ly</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/mark-down/">Markdown</a>
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">The Importance of Asking Smart Questions: A Deep Dive into StackOverflow</h1>
+  <span class="date">07 Sep 2023</span>
+  <hr>
+  <p><img src="../img/stackoverflow_dive/stackoverflow.png" alt="Question" /></p>
+
+<h1 id="the-importance-of-asking-smart-questions-a-deep-dive-into-stackoverflow">The Importance of Asking Smart Questions: A Deep Dive into StackOverflow</h1>
+
+<p>In the digital era, where collaborative platforms like StackOverflow provide professionals a space to seek solutions, the way questions are framed can greatly influence the outcome. Eric Steven Raymond’s guide, “How to Ask Questions the Smart Way,” sheds light on this very premise. Drawing inspiration from Raymond’s guide, this essay critically analyzes two contrasting StackOverflow questions to illustrate the significance of asking questions the right way.</p>
+
+<h2 id="a-not-so-smart-question">A Not-So-Smart Question</h2>
+
+<p><strong>Question:</strong> <em><a href="https://stackoverflow.com/questions/3905734/how-to-send-100-000-emails-weekly">“How to send 100,000 emails weekly?”</a></em></p>
+
+<p>Summary: “Hey, I need to spam 100k emails in PHP every week. How do I hit all these:
+AOL, G-Mail, Hotmail, Yahoo.
+I don’t want them in spam. And yeah, just PHP stuff, no fancy solutions. Any simple library out there?”</p>
+
+<p><strong>Critique:</strong></p>
+<ul>
+  <li><strong>Broadness:</strong> The query lacks a clear and focused problem statement.</li>
+  <li><strong>Assumptions:</strong> The user assumes PHP is the only solution and dismisses others without reason.</li>
+  <li><strong>Lack of Research:</strong> The query gives no indication of any prior attempts or research.</li>
+  <li><strong>Lack of Specificity:</strong> It doesn’t offer specific details about the intended email content, nature of the recipients, or any technical constraints.</li>
+</ul>
+
+<h2 id="how-can-this-be-better-worded-to-elicit-more-help-efficiently">How can this be better worded to elicit more help efficiently?</h2>
+
+<p>I’m embarking on a project requiring me to send weekly emails to roughly 100,000 subscribers. Having conducted initial research, I realize the intricacies of sending large volumes of emails, especially with major providers such as AOL, Gmail, Hotmail, and Yahoo.</p>
+
+<h3 id="background">Background:</h3>
+<ul>
+  <li>I have a rudimentary PHP script capable of sending emails, though not designed for vast quantities.</li>
+  <li>I’ve configured our domain with SPF, DKIM, and DMARC records, understanding their importance in email deliverability.</li>
+  <li>All our subscribers are opt-in, and we’ve integrated a precise unsubscribe system.</li>
+</ul>
+
+<h3 id="questions">Questions:</h3>
+<ol>
+  <li>Can anyone suggest PHP libraries or services tailored for bulk email dispatch and optimization?</li>
+  <li>What crucial best practices should I adopt for emailing a vast audience to ensure optimal deliverability?</li>
+  <li>Does anyone have specific experiences with AOL, Gmail, Hotmail, or Yahoo that could share insights about guaranteeing inbox placement?</li>
+</ol>
+
+<h3 id="answer-to-the-dumb-question">Answer To The “Dumb” Question:</h3>
+<p>Sending such a large volume of emails presents various challenges:</p>
+
+<ol>
+  <li><strong>Content Concerns:</strong> Ensure that the content isn’t spam and is distinguishable from spam. Some legitimate businesses have difficulty emailing due to their association with common spam phrases or names.</li>
+  <li><strong>Infrastructure Needs:</strong>
+    <ul>
+      <li>A dedicated SMTP server</li>
+      <li>An email wrapper like PhpMailer</li>
+      <li>A sender function for bulk sending</li>
+    </ul>
+  </li>
+  <li><strong>Delivery Obstacles:</strong>
+    <ul>
+      <li>Managing email sending rates to prevent server bans</li>
+      <li>Proper PTR, SPF, DKIM records setup</li>
+      <li>Addressing network issues, DNS misconfigurations, and invalid email addresses</li>
+      <li>Managing unsubscriptions and bounce backs</li>
+      <li>Handling potential blacklisting and delisting efforts</li>
+    </ul>
+  </li>
+  <li><strong>Legal Considerations:</strong> Complying with various international, national, and local anti-spam laws.</li>
+  <li><strong>Inherent Email Challenges:</strong>
+    <ul>
+      <li>Delays or loss in email delivery due to the store-and-forward nature of SMTP</li>
+      <li>Emails being marked as spam, modified en route, or not delivered at all</li>
+      <li>Potential conflicts with certain email client behaviors like Microsoft Outlook</li>
+      <li>Risk of triggering infinite auto-response loops</li>
+    </ul>
+  </li>
+</ol>
+
+<p>In essence, while sending an email might seem straightforward, ensuring its proper delivery, especially in bulk, is a complex task.</p>
+
+<p>Though the question had a significant negative reception (-146 votes), it received an exhaustive answer highlighting the complexities involved. Despite the question’s poor framing, the community’s collective knowledge shone through in the answer.</p>
+
+<h2 id="a-smart-question">A Smart Question</h2>
+
+<p><strong>Question:</strong> <em><a href="https://stackoverflow.com/questions/157944/create-arraylist-from-array/157950#157950">“Create ArrayList from array”</a></em></p>
+
+<p>Summary: “Given an array of type Element[]:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Element[] array = {new Element(1), new Element(2), new Element(3)};
+How do I convert this array into an object of type ArrayList&lt;Element&gt;?"
+</code></pre></div></div>
+
+<p><strong>Strengths:</strong></p>
+<ul>
+  <li><strong>Conciseness:</strong> The question is succinct without being vague.</li>
+  <li><strong>Clear Context:</strong> The user provides enough background for someone to understand the issue.</li>
+  <li><strong>Code Snippet:</strong> By providing code, the user offers a practical context.</li>
+  <li><strong>Specificity:</strong> The user is clear about the desired outcome.</li>
+</ul>
+
+<p>The question’s clarity made it easy for the community to quickly offer a concise and effective solution: <code class="language-plaintext highlighter-rouge">new ArrayList&lt;&gt;(Arrays.asList(array));</code></p>
+
+<h2 id="concluding-thoughts">Concluding Thoughts</h2>
+
+<p>The way a question is framed speaks volumes about the individual’s understanding, effort, and respect for the community’s time. As demonstrated, even in platforms like StackOverflow, which is replete with professionals eager to assist, it is essential to do your part by asking questions smartly. After all, the clarity of the problem often determines the clarity of the solution.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
